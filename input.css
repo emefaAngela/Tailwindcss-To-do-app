@@ -1,0 +1,49 @@
+@tailwind base;
+
+    /* custom css */
+    .checkbox{
+        width: 5px;
+        height: 25px;
+        border-radius: 20px;
+        border:white;
+        border:solid;
+        
+        width: 5%;
+    }
+    .list{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+        
+
+    }
+    .input-field{
+        padding-bottom: 5px;
+       padding-left: 10px;
+        width: 90%;
+        
+        
+    }
+    .remove{
+        
+        padding-bottom: 5px;
+        width: 5%;
+        
+    }
+    .hr{
+        width: 100%;
+        margin: 0;
+        padding-bottom: 5px;
+    }
+    .image{
+        background-image: url(images/bg-desktop-dark.jpg);
+        position: absolute;
+        width: 100%;
+        min-height: 100px;
+    }
+    
+@tailwind components;
+@tailwind utilities;
