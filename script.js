@@ -14,8 +14,9 @@ function createTodo(){
     var li = document.createElement("li");
     li.classList.add("list");
 
-    var checkbox = document.createElement("span");
+    var checkbox = document.createElement("input");
     checkbox.classList.add("checkbox");
+    checkbox.type=("checkbox");
 
     var paragraph= document.createElement("p");
     paragraph.classList.add("input-field");
@@ -39,6 +40,15 @@ function removeTodo(removeElement){
 removeElement.parentElement.remove();
 }
 
+function toggleComplete(inputElement){
+    if(inputElement.checked === false){
+        inputElement.parentElement.classList.remove("complete");
+    } else{
+        inputElement.parentElement.classList.add("complete");
+    }
+
+}
+
 list.addEventListener("click",function(event){
 
     switch (event.target.tagName){
@@ -55,8 +65,8 @@ list.addEventListener("click",function(event){
 );
 
 list.addEventListener("change", function(event){
-    if(event.target.tagName === "span" ){
-        toggleComplete();
+    if(event.target.tagName === "INPUT" && event.target.type === "checkbox" ){
+        toggleComplete(event.target);
     }
 
 });
