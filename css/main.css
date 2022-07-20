@@ -561,12 +561,23 @@ video {
 /* custom css */
 
 .checkbox{
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance:none;
+  border: none;
   width: 5px;
   height: 25px;
-  border-radius: 20px;
+  border-radius: 25px;
+  background-color: white;
   border:white;
   border:solid;
   width: 5%;
+}
+
+.complete{
+  background-color: blue;
 }
 
 .list{
@@ -578,9 +589,16 @@ video {
 }
 
 .input-field{
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance:none;
+  border: none;
   padding-bottom: 5px;
   padding-left: 10px;
   width: 90%;
+  background-color: hsl(235, 24%, 19%);
 }
 
 .remove{

@@ -36,24 +36,60 @@ function createTodo(){
 
 }
 
+// function showEditInput(paragraphElement){
+
+//     var editInput = document.getElementsByName("editInput")[0];
+//     if(editInput){
+//         editInput.remove();
+//     }
+
+//     var input= document.createElement("input");
+//     input.type ="text";
+//     input.name ="edittask";
+//     input.value = paragraphElement.textContent;
+//     input.classList.add("input-field");
+
+//     paragraphElement.parentElement.appendChild(input);
+//     input.focus();
+
+
+// }
+
+// function updateTodo(){
+//     var editInput = document.getElementsByName("editInput")[0];
+//     if(!editInput){
+//         return;
+//     }
+//     var newText = editInput.value;
+
+//     if(newText !== ""){
+//         var paragraph = editInput.parentElement.querySelector(".paragraph");
+//         paragraph.textContent = newText;
+//     }
+//     editInput.remove();
+
+// }
+
 function removeTodo(removeElement){
 removeElement.parentElement.remove();
 }
 
 function toggleComplete(inputElement){
     if(inputElement.checked === false){
-        inputElement.parentElement.classList.remove("complete");
+        inputElement.classList.remove("complete");
     } else{
-        inputElement.parentElement.classList.add("complete");
+        inputElement.classList.add("complete");
     }
 
 }
 
 list.addEventListener("click",function(event){
 
+    event.stopPropagation();
+
     switch (event.target.tagName){
         case "P":
-            showEditInput();
+            showEditInput(event.target);
             break;
         case "DIV":
             removeTodo(event.target);
@@ -71,8 +107,18 @@ list.addEventListener("change", function(event){
 
 });
 
+// list.addEventListener("keypress", function(event){
+//     if(event.target.tagName === "Input" && event.target.type === "text" && event.key === "Enter" ){
+//         updateTodo();
+//     }
+// });
+
+// document.addEventListener("click",updateTodo);
+
+
 
 addInput.addEventListener("keypress",function(event){
+    event.stopPropagation();
     if( event.key === "Enter"){
         createTodo();
     }
