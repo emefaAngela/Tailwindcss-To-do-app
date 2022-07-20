@@ -596,6 +596,8 @@ video {
 
 .image{
   background-image: url(images/bg-desktop-dark.jpg);
+  position: absolute;
+  width: 100%;
   min-height: 100px;
 }
 

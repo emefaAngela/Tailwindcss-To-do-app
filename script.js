@@ -14,10 +14,10 @@ function createTodo(){
     var li = document.createElement("li");
     li.classList.add("list");
 
-    var checkbox = document.createElement("div");
+    var checkbox = document.createElement("span");
     checkbox.classList.add("checkbox");
 
-    var paragraph= document.createElement("div");
+    var paragraph= document.createElement("p");
     paragraph.classList.add("input-field");
     paragraph.textContent = text;
 
@@ -33,11 +33,33 @@ function createTodo(){
 
     addInput.value = "";
 
-
-
-
-
 }
+
+function removeTodo(removeElement){
+removeElement.parentElement.remove();
+}
+
+list.addEventListener("click",function(event){
+
+    switch (event.target.tagName){
+        case "P":
+            showEditInput();
+            break;
+        case "DIV":
+            removeTodo(event.target);
+            break;
+        
+    }
+}
+
+);
+
+list.addEventListener("change", function(event){
+    if(event.target.tagName === "span" ){
+        toggleComplete();
+    }
+
+});
 
 
 addInput.addEventListener("keypress",function(event){
