@@ -12,13 +12,14 @@
         height: 25px;
         border-radius: 25px;
         background-color: white;
-        border:white;
-        border:solid;
+        /* border:white;
+        border:solid; */
         
         width: 5%;
     }
     .complete{
-        background-color: blue;
+        background-color: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+        background-color:blue;
     }
     .list{
         width: 100%;
