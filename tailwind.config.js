@@ -17,6 +17,9 @@ module.exports = {
         VeryDarkGrayishBlue: 'hsl(233, 14%, 35%)',
         VeryDarkGrayishBlue: 'hsl(237, 14%, 26%)',
       },
+      backgroundImage:{
+        'hero':"url('/images/bg-desktop-dark.jpg')"
+      }
     },
   },
   plugins: [],

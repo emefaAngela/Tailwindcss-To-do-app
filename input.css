@@ -21,6 +21,12 @@
         background-color: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
         background-color:blue;
     }
+    body{
+        background-image: url(images/bg-desktop-dark.jpg);
+        min-height: 100px;
+        position: absolute;
+        
+    }
     .list{
         width: 100%;
         display: flex;
