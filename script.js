@@ -11,8 +11,13 @@ function createTodo(){
     var hr = document.createElement("hr");
     hr.classList.add("hr");
 
+    
+
     var li = document.createElement("li");
     li.classList.add("list");
+
+    var li_container = document.createElement("div");
+    li_container.classList.add("inner-container");
 
     var checkbox = document.createElement("input");
     checkbox.classList.add("checkbox");
@@ -26,15 +31,31 @@ function createTodo(){
     removebtn.classList.add("remove");
     removebtn.innerHTML ="&cross;";
 
-    li.appendChild(checkbox);
-    li.appendChild(paragraph);
-    li.appendChild(removebtn);
-    list.appendChild(hr);
+    li_container.appendChild(checkbox);
+    li_container.appendChild(paragraph);
+    li_container.appendChild(removebtn);
+    li.appendChild(hr);
+    li.appendChild(li_container);
     list.appendChild(li);
+    
 
     addInput.value = "";
 
 }
+
+var togglebtn= document.getElementById("toggle");
+var body= document.querySelector("body");
+var field=document.getElementsByClassName("textfield");
+var img=document.getElementById("bgimage");
+
+togglebtn.addEventListener('click',function changemode(){
+   this.classList.add('togglemode');
+   body.style.background='white';
+   body.style.color='black';
+   textfield.style.background='white';
+   textfield.style.color='black';
+   document.getElementById("bgimage").src=images/bg-desktop-white.jpg;
+});
 
 // function showEditInput(paragraphElement){
 
@@ -71,7 +92,7 @@ function createTodo(){
 // }
 
 function removeTodo(removeElement){
-removeElement.parentElement.remove();
+removeElement.parentElement.parentElement.remove();
 }
 
 function toggleComplete(inputElement){

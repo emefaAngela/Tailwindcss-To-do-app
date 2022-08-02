@@ -590,6 +590,14 @@ body{
 .list{
   width: 100%;
   display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.inner-container{
+  width: 100%;
+  display: flex;
   flex-direction: row;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -624,6 +632,10 @@ body{
   position: absolute;
   width: 100%;
   min-height: 100px;
+}
+
+.togglemode{
+  src: url(./images/icon-moon.svg)
 }
 
 .absolute {
