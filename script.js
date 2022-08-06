@@ -1,3 +1,31 @@
+// let element_to_drag;
+// let element_to_replace;
+
+// const startdrag = (event) =>{
+// let element= event.target;
+// element_to_drag = element;
+// console.log(element_to_drag);
+// }
+
+// const replaceitem =(event) =>{
+//    let element = event.target;
+//    element_to_replace= element;  
+// }
+
+// // const dragover =(event) =>{
+// //     event.preventdefault();
+// // }
+// const replace =() =>{
+//    let container=document.getElementById("lists"); 
+//    console.log("kofi");   
+//    container.insertBefore(element_to_replace,element_to_drag)
+// }
+
+
+
+
+
+
 var list = document.getElementById("lists");
 var addInput = document.getElementById("to-do-input");
 
@@ -15,6 +43,16 @@ function createTodo(){
 
     var li = document.createElement("li");
     li.classList.add("list");
+    li.draggable='true';
+    // li.ondragover=dragover;
+    li.addEventListener('dragstart',startdrag);
+    // li.dragstart=startdrag(event);
+    li.addEventListener('dragenter',replaceitem);
+    // li.ondragenter=replaceitem(event);
+    li.addEventListener('dragover',drag_over);
+    li.addEventListener('drop',replace);
+    // li.ondrop=replace;
+   
 
     var li_container = document.createElement("div");
     li_container.classList.add("inner-container");
@@ -41,20 +79,54 @@ function createTodo(){
 
     addInput.value = "";
 
+
+   
+
 }
+
+ let element_to_drag;
+ let element_to_replace;
+
+const startdrag = (event) =>{
+ let element= event.target;
+ element_to_drag = element;
+}
+
+const replaceitem =(event) =>{
+    let element = event.target;
+    element_to_replace= element;  
+}
+
+const drag_over =(event) =>{
+    event.preventdefault();
+}
+const replace =() =>{
+    let container=document.getElementById("lists"); 
+    console.log("kofi");   
+    container.insertBefore(element_to_replace,element_to_drag);
+}
+
+
+
+
 
 var togglebtn= document.getElementById("toggle");
 var body= document.querySelector("body");
-var field=document.getElementsByClassName("textfield");
+var field=document.getElementById("text-field");
+var input=document.getElementById("to-do-input");
 var img=document.getElementById("bgimage");
+var list=document.getElementById("lists");
 
 togglebtn.addEventListener('click',function changemode(){
    this.classList.add('togglemode');
    body.style.background='white';
    body.style.color='black';
-   textfield.style.background='white';
-   textfield.style.color='black';
-   document.getElementById("bgimage").src=images/bg-desktop-white.jpg;
+  
+    field.classList.add('hidden');
+   input.classList.remove('input-field');
+   input.classList.add('input-field-white');
+   img.setAttribute('src','images/bg-desktop-white.jpg');
+   
 });
 
 // function showEditInput(paragraphElement){

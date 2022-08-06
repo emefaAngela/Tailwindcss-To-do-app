@@ -35,8 +35,13 @@
         padding-bottom: 5px;
         
         
-
     }
+    /* #lists{
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column-reverse;
+    } */
     .inner-container{
         width: 100%;
         display: flex;
@@ -54,10 +59,34 @@
         padding-bottom: 5px;
        padding-left: 10px;
         width: 90%;
+        background-color: hsl(235, 24%, 19%);   
+    }
+    .input-field-white{
+        outline: none;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance:none;
+        border: none;
+        padding-bottom: 5px;
+       padding-left: 10px;
+        width: 90%;
+        background-color: white;
+        color: black; 
+    }
+    .dark-mode{
         background-color: hsl(235, 24%, 19%);
-        
-        
-        
+        margin:auto;
+        padding: 20px;
+
+
+    }
+    .hidden{
+        display: none;
+    }
+    .white-mode{
+        background-color: white;
+        color: black;
     }
     .remove{
         

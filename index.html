@@ -13,22 +13,22 @@
     
     <div class=" w-1/2 flex justify-between m-auto items-center pt-20">
         <div class="text-3xl text-white font-bold tracking-widest">TODO</div>
-        <div><img src="./images/icon-sun.svg" alt="" id="toggle" class="togglemode"></div>
+        <div><img src="./images/icon-sun.svg" alt="" id="toggle" class="togglemode ">
+          <img src="./images/icon-moon.svg" alt="" id="toggle" class="togglemode hidden ">
+        </div>
     </div>
 
-    <div class=" w-1/2 space-x-5 m-auto flex bg-VeryDarkDesaturatedBlue  mt-10 pr-5 pl-5   text-white mb-10" class="textfield">
+    <div  class="w-1/2 space-x-5 m-auto flex bg-VeryDarkDesaturatedBlue  mt-10 pr-5 pl-5   text-white mb-10" >
       <span class="mt-4 mb-2 w-5 h-5 rounded-full border-white border-2"></span>
-      <input type="text" placeholder="add a to do"  id="to-do-input" class="input-field bg-VeryDarkDesaturatedBlue w-full border-0 mt-4 mb-2" class="textfield">
+      <input type="text" placeholder="add a to do"  id="to-do-input" class="input-field  bg-VeryDarkDesaturatedBlue w-full border-0 mt-4 mb-2" >
     </div>
 
-  <div class="w-1/2  bg-VeryDarkDesaturatedBlue m-auto pr-5 pl-5 pt-5 pb-5" class="textfield">
+  <div id="text-field " class="dark-mode w-1/2 " >
 
-   <ul id="lists" class="  flex flex-col-reverse  text-white ">
-    
-   
+   <ul id="lists" class=" flex flex-col-reverse  text-white" draggable="tr">
     
     <li>
-    <div class="flex justify-between text-white">
+    <div class=" flex justify-between text-white">
         <div><!-- Add dynamic number --> items left</div>
 
         <div class="flex space-x-5 items-center justify-center">

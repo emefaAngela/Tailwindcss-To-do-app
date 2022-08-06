@@ -595,6 +595,13 @@ body{
   padding-bottom: 5px;
 }
 
+/* #lists{
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column-reverse;
+    } */
+
 .inner-container{
   width: 100%;
   display: flex;
@@ -614,6 +621,35 @@ body{
   padding-left: 10px;
   width: 90%;
   background-color: hsl(235, 24%, 19%);
+}
+
+.input-field-white{
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance:none;
+  border: none;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  width: 90%;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode{
+  background-color: hsl(235, 24%, 19%);
+  margin:auto;
+  padding: 20px;
+}
+
+.hidden{
+  display: none;
+}
+
+.white-mode{
+  background-color: white;
+  color: black;
 }
 
 .remove{
@@ -636,6 +672,40 @@ body{
 
 .togglemode{
   src: url(./images/icon-moon.svg)
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 
 .absolute {
@@ -672,6 +742,10 @@ body{
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-5 {
@@ -749,14 +823,6 @@ body{
 
 .pl-5 {
   padding-left: 1.25rem;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
 }
 
 .text-3xl {
